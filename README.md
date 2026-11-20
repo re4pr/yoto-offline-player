@@ -1,5 +1,7 @@
 # Yoto Offline Player (Android Tablet)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 A kid-safe, touch-first Android tablet client (`com.homelab.yototablet`) for listening to playlists from a self-hosted LAN Yoto Hub API, with automatic network refresh and full local offline caching so every static playlist works reliably away from home.
 
 ---
@@ -50,3 +52,9 @@ The app expects a local HTTP API exposing:
 ```
 
 Install the generated APK (`app/build/outputs/apk/debug/app-debug.apk`) via `adb install -r`.
+
+---
+
+## License
+
+This project is open-source software released under the [MIT License](LICENSE). Anyone is free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software.
