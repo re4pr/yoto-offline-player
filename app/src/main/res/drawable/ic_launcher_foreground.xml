@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <group
+        android:scaleX="0.58"
+        android:scaleY="0.58"
+        android:translateX="5.04"
+        android:translateY="5.04">
+        <!-- Yoto-inspired rounded card/player body -->
+        <path
+            android:fillColor="#FF9CE3"
+            android:pathData="M6,3h12c1.66,0 3,1.34 3,3v12c0,1.66 -1.34,3 -3,3H6c-1.66,0 -3,-1.34 -3,-3V6c0,-1.66 1.34,-3 3,-3zM6,5c-0.55,0 -1,0.45 -1,1v12c0,0.55 0.45,1 1,1h12c0.55,0 1,-0.45 1,-1V6c0,-0.55 -0.45,-1 -1,-1H6z" />
+        <!-- Musical note inside -->
+        <path
+            android:fillColor="#FFD97D"
+            android:pathData="M13,7v5.51c-0.46,-0.32 -1.03,-0.51 -1.65,-0.51 -1.57,0 -2.85,1.28 -2.85,2.85s1.28,2.85 2.85,2.85 2.85,-1.28 2.85,-2.85V9.5h2.3V7H13z" />
+        <!-- Sparkle accent -->
+        <path
+            android:fillColor="#8BE9FD"
+            android:pathData="M7.5,7l0.55,1.2 1.2,0.55 -1.2,0.55L7.5,10.5l-0.55,-1.2L5.75,8.75l1.2,-0.55z" />
+    </group>
+</vector>

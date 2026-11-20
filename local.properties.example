@@ -1,0 +1,4 @@
+# Copy to local.properties (gitignored) and customize for your local environment
+sdk.dir=/path/to/Android/Sdk
+yoto.hubUrl=http://192.168.1.100:9595
+yoto.appName=Yoto Offline Player
