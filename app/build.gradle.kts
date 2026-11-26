@@ -94,8 +94,8 @@ android {
     applicationId = "com.homelab.yototablet"
     minSdk = 28
     targetSdk = 34
-    versionCode = 1
-    versionName = "1.0.0"
+    versionCode = 2
+    versionName = "1.0.1"
 
     buildConfigField("String", "DEFAULT_HUB_URL", "\"${escapeForJava(configuredHubUrl)}\"")
     buildConfigField("String", "APP_DISPLAY_NAME", "\"${escapeForJava(configuredAppDisplayName)}\"")

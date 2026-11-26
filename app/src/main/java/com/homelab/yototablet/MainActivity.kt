@@ -11,7 +11,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.background
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.gestures.awaitEachGesture
 import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.gestures.waitForUpOrCancellation
@@ -38,7 +38,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.AutoAwesome
 import androidx.compose.material.icons.rounded.CloudOff
-import androidx.compose.material.icons.rounded.MusicNote
 import androidx.compose.material.icons.rounded.OfflinePin
 import androidx.compose.material.icons.rounded.Refresh
 import androidx.compose.material3.Button
@@ -60,9 +59,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -179,7 +179,6 @@ class MainActivity : ComponentActivity() {
                             worldLabel = currentWorld.label,
                             syncStatus = syncStatus,
                             accentColor = currentWorld.accentColor,
-                            secondaryColor = currentWorld.secondaryColor,
                             onLongHoldTitle = { showParentDialog = true },
                             onCycleWorld = {
                                 val next = nextMagicalWorld(currentWorld.id)
@@ -357,7 +356,6 @@ private fun HeaderBar(
     worldLabel: String,
     syncStatus: SyncStatusState,
     accentColor: Color,
-    secondaryColor: Color,
     onLongHoldTitle: () -> Unit,
     onCycleWorld: () -> Unit,
     onRefresh: () -> Unit,
@@ -388,22 +386,14 @@ private fun HeaderBar(
                     }
                 },
         ) {
-            Box(
+            Image(
+                painter = painterResource(id = R.drawable.ic_yoto_logo),
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
                 modifier = Modifier
                     .size(46.dp)
-                    .clip(CircleShape)
-                    .background(
-                        Brush.linearGradient(listOf(accentColor, secondaryColor))
-                    ),
-                contentAlignment = Alignment.Center,
-            ) {
-                Icon(
-                    imageVector = Icons.Rounded.MusicNote,
-                    contentDescription = null,
-                    tint = Color(0xFF0A0B10),
-                    modifier = Modifier.size(26.dp),
-                )
-            }
+                    .clip(CircleShape),
+            )
 
             Column {
                 Text(
